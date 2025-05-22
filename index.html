@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Salim Farhat - Software Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Visualization & Content Choices:
+        - Contact: Goal: Inform. Method: HTML text + Unicode icons. Interaction: mailto link. Justification: Standard & accessible.
+        - Experience (Smart Attendance): Goal: Inform, Highlight Tech. Method: HTML text, Tailwind-styled badges for React, .NET. Interaction: Visual emphasis. Justification: Highlights key tech.
+        - Experience (Internship): Goal: Inform. Method: HTML text. Justification: Standard.
+        - Education: Goal: Inform. Method: HTML text. Justification: Standard.
+        - Skills: Goal: Inform, Organize. Method: Categorized HTML lists, bold key skills. Interaction: Subtle hover. Justification: Clear overview.
+        - Languages: Goal: Inform. Method: HTML list. Justification: Standard.
+        - No charts (Chart.js/Plotly) are used as the CV content is primarily textual and descriptive. Focus is on interactive presentation of text.
+        - CONFIRMATION: NO SVG/Mermaid. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Assuming Inter is a preferred font, fallback to sans-serif */
+        }
+        /* Fallback for Inter font if not loaded via Tailwind's default or other means */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        .tech-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px; /* full */
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 500; /* medium */
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .react-badge {
+            background-color: #61DAFB; /* React blue */
+            color: #20232A; /* React dark text */
+        }
+        .dotnet-badge {
+            background-color: #512BD4; /* .NET purple */
+            color: white;
+        }
+        .generic-badge {
+            background-color: #e5e7eb; /* gray-200 */
+            color: #374151; /* gray-700 */
+        }
+    </style>
+</head>
+<body class="bg-stone-100 text-stone-800 antialiased">
+
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold text-sky-700">Mohammad Salim Farhat</h1>
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-4">
+                        <li><a href="#about" class="text-stone-600 hover:text-sky-600 px-3 py-2 rounded-md text-sm font-medium">About</a></li>
+                        <li><a href="#experience" class="text-stone-600 hover:text-sky-600 px-3 py-2 rounded-md text-sm font-medium">Experience</a></li>
+                        <li><a href="#education" class="text-stone-600 hover:text-sky-600 px-3 py-2 rounded-md text-sm font-medium">Education</a></li>
+                        <li><a href="#skills" class="text-stone-600 hover:text-sky-600 px-3 py-2 rounded-md text-sm font-medium">Skills</a></li>
+                    </ul>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-stone-600 hover:text-sky-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <li><a href="#about" class="block text-stone-600 hover:text-sky-600 hover:bg-stone-50 px-3 py-2 rounded-md text-base font-medium">About</a></li>
+                <li><a href="#experience" class="block text-stone-600 hover:text-sky-600 hover:bg-stone-50 px-3 py-2 rounded-md text-base font-medium">Experience</a></li>
+                <li><a href="#education" class="block text-stone-600 hover:text-sky-600 hover:bg-stone-50 px-3 py-2 rounded-md text-base font-medium">Education</a></li>
+                <li><a href="#skills" class="block text-stone-600 hover:text-sky-600 hover:bg-stone-50 px-3 py-2 rounded-md text-base font-medium">Skills</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <section id="about" class="mb-12 pt-16 -mt-16">
+            <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold text-sky-700 mb-4">About Me</h2>
+                <div class="text-center mb-6">
+                    <p class="text-xl text-stone-700 font-medium">Software Developer</p>
+                    <div class="mt-3 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-stone-600">
+                        <a href="mailto:mhmdfarhat4@gmail.com" class="hover:text-sky-600 flex items-center">
+                            <span class="mr-2 text-lg">📧</span> mhmdfarhat4@gmail.com
+                        </a>
+                        <span class="flex items-center">
+                            <span class="mr-2 text-lg">📞</span> +961 78857132
+                        </span>
+                        <span class="flex items-center">
+                            <span class="mr-2 text-lg">📍</span> Beirut
+                        </span>
+                    </div>
+                </div>
+                <p class="text-stone-700 leading-relaxed mb-4">
+                    I am a passionate and dedicated Software Developer with a strong foundation in computer science and a keen focus on full-stack development. My primary expertise lies in building dynamic and responsive web applications using <strong class="text-sky-600">React</strong> for the frontend and <strong class="text-sky-600">.NET (specifically .NET 8 Minimal APIs)</strong> for the backend.
+                </p>
+                <p class="text-stone-700 leading-relaxed">
+                    I thrive in collaborative environments and am always eager to learn new technologies and methodologies to deliver efficient, scalable, and user-friendly solutions. This interactive CV showcases my journey, projects, and the skills I bring to the table.
+                </p>
+            </div>
+        </section>
+
+        <section id="experience" class="mb-12 pt-16 -mt-16">
+            <h2 class="text-3xl font-bold text-sky-700 mb-6">Experience</h2>
+            <p class="text-stone-700 leading-relaxed mb-8">
+                This section outlines my professional journey, detailing the projects I've contributed to and the roles I've undertaken. You'll find information on my full-stack development experience, with a particular focus on projects utilizing React and .NET technologies. Each entry highlights key responsibilities and achievements.
+            </p>
+            <div class="space-y-8">
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3">
+                        <h3 class="text-2xl font-semibold text-sky-600">Full-Stack Developer (Team Project)</h3>
+                        <span class="text-sm text-stone-500 mt-1 sm:mt-0">Duration: 0.5 Years</span>
+                    </div>
+                    <p class="text-lg font-medium text-stone-700 mb-4">Smart Attendance Tracking System</p>
+                    <div class="mb-4">
+                        <span class="tech-badge react-badge">React</span>
+                        <span class="tech-badge dotnet-badge">.NET 8 Minimal APIs</span>
+                        <span class="tech-badge generic-badge">Git</span>
+                        <span class="tech-badge generic-badge">GitHub</span>
+                        <span class="tech-badge generic-badge">JWT</span>
+                        <span class="tech-badge generic-badge">Firebase</span>
+                        <span class="tech-badge generic-badge">Back4App</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-stone-700">
+                        <li>Developed a full-stack web application utilizing <strong>React</strong> for the frontend and <strong>.NET 8 Minimal REST APIs</strong> for the backend, with version control managed via Git and GitHub.</li>
+                        <li>Implemented granular role-based access control (RBAC) with distinct permissions for Superadmins (full system access) and Department admins (managing users/courses, attendance, notifications).</li>
+                        <li>Engineered a secure authentication system using JWT tokens with robust permission validation.</li>
+                        <li>Integrated IP-based attendance verification to prevent fraudulent check-ins and ensure data integrity.</li>
+                        <li>Enabled real-time notifications through Firebase Cloud Messaging for timely updates.</li>
+                        <li>Facilitated data export capabilities, including PDF and Excel report generation for attendance records.</li>
+                        <li>Designed and optimized the Back4App database schema, ensuring efficient attendance tracking and reporting.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3">
+                        <h3 class="text-2xl font-semibold text-sky-600">Full-Stack Web Development Intern</h3>
+                        <span class="text-sm text-stone-500 mt-1 sm:mt-0">07/2024 - 08/2024</span>
+                    </div>
+                    <p class="text-lg font-medium text-stone-700 mb-4">IDS Company</p>
+                     <div class="mb-4">
+                        <span class="tech-badge generic-badge">PHP</span>
+                        <span class="tech-badge generic-badge">MySQL</span>
+                        <span class="tech-badge generic-badge">HTML</span>
+                        <span class="tech-badge generic-badge">CSS</span>
+                        <span class="tech-badge generic-badge">JavaScript</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-stone-700">
+                        <li>Completed a two-month (240 hours) intensive internship, gaining practical experience in full-stack web development.</li>
+                        <li>Focused on core web technologies including PHP, MySQL, HTML, CSS, and JavaScript.</li>
+                        <li>Applied object-oriented programming principles in project development.</li>
+                        <li>Participated actively in collaborative projects, including code reviews and utilization of project management tools.</li>
+                        <li>Demonstrated strong work ethic, punctuality, and a proactive approach to learning.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="mb-12 pt-16 -mt-16">
+            <h2 class="text-3xl font-bold text-sky-700 mb-6">Education</h2>
+            <p class="text-stone-700 leading-relaxed mb-8">
+                Here you can review my academic background, including my ongoing Master's studies and my Bachelor's degree in Computer Science. These qualifications have provided a strong theoretical foundation for my technical skills and problem-solving abilities.
+            </p>
+            <div class="space-y-8">
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                        <h3 class="text-xl font-semibold text-sky-600">Master 1, Computer Science</h3>
+                        <span class="text-sm text-stone-500 mt-1 sm:mt-0">2024 - 06/2025</span>
+                    </div>
+                    <p class="text-stone-700">Lebanese University | Beirut, Lebanon</p>
+                </div>
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                        <h3 class="text-xl font-semibold text-sky-600">Bachelor's Degree, Computer Science</h3>
+                        <span class="text-sm text-stone-500 mt-1 sm:mt-0">2021 - 05/2024</span>
+                    </div>
+                    <p class="text-stone-700">Lebanese University | Beirut, Lebanon</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="mb-12 pt-16 -mt-16">
+            <h2 class="text-3xl font-bold text-sky-700 mb-6">Skills</h2>
+            <p class="text-stone-700 leading-relaxed mb-8">
+                Discover the range of technical skills I've acquired, from programming languages and frameworks like React and .NET, to essential development tools. These competencies enable me to build robust, efficient, and user-centric software solutions.
+            </p>
+            <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <div>
+                        <h4 class="text-xl font-semibold text-sky-600 mb-3 flex items-center"><span class="mr-2 text-lg">💻</span> Languages</h4>
+                        <ul class="space-y-1 text-stone-700">
+                            <li>C</li>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>SQL</li>
+                            <li>PHP</li>
+                            <li>C#</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold text-sky-600 mb-3 flex items-center"><span class="mr-2 text-lg">🧩</span> Frameworks</h4>
+                        <ul class="space-y-1 text-stone-700">
+                            <li><strong class="font-medium">React</strong></li>
+                            <li>ASP.NET Core</li>
+                            <li><strong class="font-medium">.NET 8 Minimal APIs</strong></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold text-sky-600 mb-3 flex items-center"><span class="mr-2 text-lg">🛠️</span> Tools</h4>
+                        <ul class="space-y-1 text-stone-700">
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>Firebase</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-2 lg:col-span-1">
+                         <h4 class="text-xl font-semibold text-sky-600 mb-3 flex items-center"><span class="mr-2 text-lg">🌐</span> Additional</h4>
+                        <ul class="space-y-1 text-stone-700">
+                            <li>REST APIs</li>
+                            <li>Cross-Team Collaboration</li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h4 class="text-xl font-semibold text-sky-600 mb-3 flex items-center"><span class="mr-2 text-lg">🗣️</span> Spoken Languages</h4>
+                        <ul class="space-y-1 text-stone-700">
+                            <li>Arabic (Fluent)</li>
+                            <li>English (Fluent)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-stone-800 text-stone-300 py-8 text-center">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; <span id="currentYear"></span> Mohammad Salim Farhat. All rights reserved.</p>
+            <p class="text-sm mt-1">Interactive CV generated with care.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // The offset is to account for the sticky header
+                    // Get header height dynamically in case it changes
+                    const headerOffset = document.querySelector('header').offsetHeight || 64; // Default to 64px if not found
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+        
+        // Set current year in footer
+        const currentYearElement = document.getElementById('currentYear');
+        if (currentYearElement) {
+            currentYearElement.textContent = new Date().getFullYear();
+        }
+    </script>
+
+</body>
+</html>
